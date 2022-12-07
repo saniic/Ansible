@@ -1,0 +1,6 @@
+- hosts: localhost
+  #gather_facts: no
+  tasks:
+     - name: Print secret
+       debug:
+         msg: "{{ lookup('aws_secret', 'test/testapp/apppassword') }}"
